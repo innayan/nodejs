@@ -11,7 +11,7 @@ accordingly, and delete the patch script.
 changeBuildType(RelativeId("Jonnizzz")) {
     requirements {
         add {
-            contains("teamcity.agent.name", "B")
+            contains("teamcity.agent.name", "t")
         }
     }
 }
