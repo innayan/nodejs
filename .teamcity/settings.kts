@@ -27,6 +27,7 @@ version = "2019.1"
 project {
 
     buildType(Jonnizzz)
+     buildType(FrontendInfrastructure_Testoutput)
 }
 
 object Jonnizzz : BuildType({
