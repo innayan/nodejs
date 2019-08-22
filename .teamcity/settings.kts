@@ -49,3 +49,24 @@ object Jonnizzz : BuildType({
         }
     }
 })
+object FrontendInfrastructure_Testoutput : BuildType({
+    id("Testoutput")
+    name = "Testoutput"
+    steps {
+        step {
+            name = "output"
+            type = "jonnyzzz.node"
+            param("node_script_text", """
+                console.log("##teamcity[testSuiteStarted name='ie11']")
+                console.log("##teamcity[testSuiteStarted name='Button']")
+                console.log("##teamcity[testSuiteStarted name='playground']")
+                console.log("##teamcity[testStarted name='idle']")
+                console.log("##teamcity[testFinished name='idle']")
+                console.log("##teamcity[testSuiteFinished name='playground']")
+                console.log("##teamcity[testSuiteFinished name='Button']")
+                console.log("##teamcity[testSuiteFinished name='ie11']")
+            """.trimIndent())
+            param("node_execution_mode", "script")
+        }
+    }
+})
