@@ -13,5 +13,8 @@ changeBuildType(RelativeId("Jonnizzz")) {
         add {
             contains("teamcity.agent.name", "t")
         }
+        add {
+            contains("teamcity.agent.name", "gent")
+        }
     }
 }
